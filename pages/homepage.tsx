@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import Link from "next/link";
+import TransitionLayout from "@/components/transtition";
 
 function variants() {
   return {
@@ -28,6 +29,7 @@ export default function HomePage() {
 
   return (
     <div id="home" className="bg-[#f5f5db] py-4 px-6 md:px-12">
+      <TransitionLayout />
       <div className="max-w-screen-xl mx-auto mt-4">
         <motion.div
           className="grid grid-flow-row w-full h-screen sm:grid-flow-col grid-rows-2 md:grid-rows-1 sm:grid-cols-2 gap-4 py-2 sm:py-4"

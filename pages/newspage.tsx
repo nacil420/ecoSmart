@@ -10,6 +10,7 @@ import {
   MdKeyboardDoubleArrowLeft,
 } from "react-icons/md";
 import { News } from "@/data/news";
+import TransitionLayout from "@/components/transtition";
 
 const ITEMS_PER_PAGE = 6;
 const variants = {
@@ -41,9 +42,10 @@ export default function NewsPage() {
 
   return (
     <>
+      <TransitionLayout />
       {/* cover project */}
       <div className="w-full h-screen bg-newspage bg-cover bg-center">
-        <div className="h-full w-full py-[125px] px-8 flex items-end justify-center bg-black/80">
+        <div className="h-full w-full py-[125px] px-8 flex md:items-end items-center justify-center bg-black/80">
           <motion.div
             variants={variants}
             initial="offscreen"
@@ -104,7 +106,7 @@ export default function NewsPage() {
                   initial="offscreen"
                   animate="onscreen"
                   viewport={{ once: true }}
-                  className="border-[3px] border-[#2f7d32] bg-slate-100 shadow-lg shadow-black p-4 rounded-md hover:scale-110"
+                  className="border-[3px] border-[#2f7d32] bg-slate-100 p-4 rounded-md hover:scale-110"
                 >
                   <Link
                     href={{

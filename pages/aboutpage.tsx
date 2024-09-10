@@ -5,6 +5,7 @@ import { IoArrowDownCircleOutline } from "react-icons/io5";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import TransitionLayout from "@/components/transtition";
 
 const variants = {
   offscreen: { y: 150, opacity: 0 },
@@ -18,9 +19,10 @@ const variants = {
 export default function AboutPage() {
   return (
     <>
+      <TransitionLayout />
       {/* Cover Section */}
       <div className="w-full h-screen bg-aboutpage bg-cover bg-center">
-        <div className="h-full w-full py-[125px] px-8 flex items-end justify-center bg-black/80">
+        <div className="h-full w-full py-[125px] px-8 flex md:items-end items-center justify-center bg-black/80">
           <motion.div
             className="w-full md:w-[55%] flex flex-col items-center justify-center"
             variants={variants}

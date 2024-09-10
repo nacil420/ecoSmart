@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { useSearchParams } from "next/navigation";
 import { Baju, Product, Pupuk } from "@/data/product";
 import { FaWhatsapp } from "react-icons/fa";
+import TransitionLayout from "@/components/transtition";
 
 const variants = {
   offscreen: { y: 150, opacity: 0 },
@@ -31,9 +32,10 @@ export default function ProductDetailsPage() {
 
   return (
     <>
+      <TransitionLayout />
       {/* cover product */}
       <div className="w-full h-screen bg-aboutpage bg-cover bg-center">
-        <div className="h-full w-full py-[125px] px-8 flex items-end justify-center bg-black/80">
+        <div className="h-full w-full py-[125px] px-8 flex md:items-end items-center justify-center bg-black/80">
           <motion.div
             variants={variants}
             initial="offscreen"

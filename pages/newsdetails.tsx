@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { News } from "@/data/news";
+import TransitionLayout from "@/components/transtition";
 
 const variants = {
   offscreen: { y: 150, opacity: 0 },
@@ -33,9 +34,10 @@ export default function NewsDetailsPage() {
 
   return (
     <>
+      <TransitionLayout />
       {/* cover project */}
       <div className="w-full h-screen bg-aboutpage bg-cover bg-center">
-        <div className="h-full w-full py-[125px] px-8 flex items-end justify-center bg-black/80">
+        <div className="h-full w-full py-[125px] px-8 flex md:items-end items-center justify-center bg-black/80">
           <motion.div
             variants={variants}
             initial="offscreen"
@@ -77,7 +79,7 @@ export default function NewsDetailsPage() {
         id="news"
         className="flex md:flex-row flex-col items-start justify-center gap-12 p-8"
       >
-        <div className="xl:w-[70%] md:w-[80%] w-full h-full border-[3px] border-[#2f7d32] bg-slate-100 shadow-lg shadow-black p-4 rounded-md">
+        <div className="xl:w-[70%] md:w-[80%] w-full h-full border-[3px] border-[#2f7d32] bg-slate-100 p-4 rounded-md">
           <h1 className="text-4xl font-bold text-[#2f7d32]">{head}</h1>
           <p className="text-lg font-semibold text-[#2f7d32]">{subHead}</p>
           <div className="my-4 flex items-center justify-center">
